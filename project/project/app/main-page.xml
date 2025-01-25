@@ -1,0 +1,29 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo">
+    <ActionBar title="Indian Food Delivery" class="bg-orange-600 text-white" />
+    
+    <GridLayout rows="auto, *, auto">
+        <SearchBar hint="Search Indian restaurants..." row="0" text="{{ searchQuery }}" submit="{{ onSearch }}" class="m-2" />
+        
+        <ListView items="{{ restaurants }}" row="1">
+            <ListView.itemTemplate>
+                <GridLayout columns="auto, *" class="p-4 border-b border-gray-200">
+                    <Image src="{{ image }}" width="100" height="100" class="rounded-lg" />
+                    <StackLayout col="1" class="ml-4">
+                        <Label text="{{ name }}" class="font-bold text-lg text-orange-600" />
+                        <Label text="{{ cuisine.join(', ') }}" class="text-gray-600" />
+                        <GridLayout columns="auto, auto, *" class="mt-2">
+                            <Label text="⭐ {{ rating }}" class="text-yellow-500" />
+                            <Label text="🕒 {{ deliveryTime }} min" col="1" class="ml-4 text-gray-500" />
+                        </GridLayout>
+                        <Label text="{{ isVegetarian ? '🌱 Pure Veg' : '' }}" class="text-green-600" />
+                    </StackLayout>
+                </GridLayout>
+            </ListView.itemTemplate>
+        </ListView>
+        
+        <GridLayout row="2" columns="*, auto" class="bg-white p-4 border-t border-gray-200">
+            <Label text="Cart Total: {{ cartTotal | currency:'INR' }}" class="font-bold text-lg" />
+            <Button text="View Cart" tap="{{ onViewCart }}" col="1" class="bg-orange-600 text-white rounded-lg px-4" />
+        </GridLayout>
+    </GridLayout>
+</Page>
