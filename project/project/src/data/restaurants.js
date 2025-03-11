@@ -5,8 +5,10 @@ export const restaurants = [
     cuisine: ['North Indian', 'Mughlai'],
     rating: 4.7,
     deliveryTime: 35,
-    image: 'https://source.unsplash.com/800x600/?indian,food',
-    isVegetarian: false
+    image: 'https://picsum.photos/800/600?random=1',
+    isVegetarian: false,
+    priceRange: '₹₹₹',
+    popularDishes: ['Butter Chicken', 'Naan', 'Mutton Rogan Josh']
   },
   {
     id: '2',
@@ -14,8 +16,10 @@ export const restaurants = [
     cuisine: ['South Indian', 'Vegetarian'],
     rating: 4.6,
     deliveryTime: 30,
-    image: 'https://source.unsplash.com/800x600/?dosa',
-    isVegetarian: true
+    image: 'https://picsum.photos/800/600?random=2',
+    isVegetarian: true,
+    priceRange: '₹₹',
+    popularDishes: ['Masala Dosa', 'Idli Sambhar', 'Rasam']
   },
   {
     id: '3',
@@ -23,8 +27,10 @@ export const restaurants = [
     cuisine: ['Punjabi', 'Street Food'],
     rating: 4.8,
     deliveryTime: 40,
-    image: 'https://source.unsplash.com/800x600/?curry',
-    isVegetarian: false
+    image: 'https://picsum.photos/800/600?random=3',
+    isVegetarian: false,
+    priceRange: '₹₹',
+    popularDishes: ['Sarson Da Saag', 'Makki Di Roti', 'Chole Bhature']
   },
   {
     id: '4',
@@ -32,7 +38,185 @@ export const restaurants = [
     cuisine: ['South Indian', 'Seafood'],
     rating: 4.5,
     deliveryTime: 35,
-    image: 'https://source.unsplash.com/800x600/?biryani',
-    isVegetarian: false
-  }
+    image: 'https://picsum.photos/800/600?random=4',
+    isVegetarian: false,
+    priceRange: '₹₹₹',
+    popularDishes: ['Chettinad Chicken', 'Prawn Curry', 'Dosa']
+  },
+  {
+    id: '5',
+    name: 'Mumbai Tandoori',
+    cuisine: ['Tandoori', 'Maharashtrian'],
+    rating: 4.3,
+    deliveryTime: 25,
+    image: 'https://picsum.photos/800/600?random=5',
+    isVegetarian: false,
+    priceRange: '₹₹',
+    popularDishes: ['Tandoori Chicken', 'Bhakri', 'Misal Pav']
+  },
+  {
+    id: '6',
+    name: 'Biryani Junction',
+    cuisine: ['Hyderabadi', 'Mughlai'],
+    rating: 4.9,
+    deliveryTime: 45,
+    image: 'https://picsum.photos/800/600?random=6',
+    isVegetarian: false,
+    priceRange: '₹₹₹',
+    popularDishes: ['Hyderabadi Biryani', 'Mutton Dum Biryani', 'Chicken 65']
+  },
+  {
+    id: '7',
+    name: 'Veggie Delight',
+    cuisine: ['Vegetarian', 'Thali'],
+    rating: 4.4,
+    deliveryTime: 28,
+    image: 'https://picsum.photos/800/600?random=7',
+    isVegetarian: true,
+    priceRange: '₹',
+    popularDishes: ['Gujarati Thali', 'Dal Baati Churma', 'Kadhi Pakora']
+  },
+  {
+    id: '8',
+    name: 'Royal Rajasthani',
+    cuisine: ['Rajasthani', 'Marwari'],
+    rating: 4.7,
+    deliveryTime: 32,
+    image: 'https://picsum.photos/800/600?random=8',
+    isVegetarian: true,
+    priceRange: '₹₹₹',
+    popularDishes: ['Gatte ki Sabzi', 'Dal Baati Churma', 'Ker Sangri']
+  },
+  {
+    id: '9',
+    name: 'Kolkata Kathi Rolls',
+    cuisine: ['Bengali', 'Street Food'],
+    rating: 4.5,
+    deliveryTime: 20,
+    image: 'https://picsum.photos/800/600?random=9',
+    isVegetarian: false,
+    priceRange: '₹',
+    popularDishes: ['Kathi Roll', 'Puchka', 'Macher Jhol']
+  },
+  {
+    id: '10',
+    name: 'Goan Spice House',
+    cuisine: ['Goan', 'Seafood'],
+    rating: 4.6,
+    deliveryTime: 38,
+    image: 'https://picsum.photos/800/600?random=10',
+    isVegetarian: false,
+    priceRange: '₹₹₹',
+    popularDishes: ['Goan Prawn Curry', 'Fish Recheado', 'Bebinca']
+  },
+  {
+    id: '11',
+    name: 'Udupi Sagar',
+    cuisine: ['South Indian', 'Vegetarian'],
+    rating: 4.2,
+    deliveryTime: 22,
+    image: 'https://picsum.photos/800/600?random=11',
+    isVegetarian: true,
+    priceRange: '₹',
+    popularDishes: ['Set Dosa', 'Mangalore Buns', 'Rava Idli']
+  },
+  {
+    id: '12',
+    name: 'Delhi Chaat House',
+    cuisine: ['North Indian', 'Street Food'],
+    rating: 4.5,
+    deliveryTime: 18,
+    image: 'https://picsum.photos/800/600?random=12',
+    isVegetarian: true,
+    priceRange: '₹',
+    popularDishes: ['Aloo Tikki', 'Pani Puri', 'Papdi Chaat']
+  },
+  {
+    id: '13',
+    name: 'Lucknowi Nawabi',
+    cuisine: ['Awadhi', 'Mughlai'],
+    rating: 4.9,
+    deliveryTime: 40,
+    image: 'https://picsum.photos/800/600?random=13',
+    isVegetarian: false,
+    priceRange: '₹₹₹',
+    popularDishes: ['Galouti Kebab', 'Lucknowi Biryani', 'Sheermal']
+  },
+  {
+    id: '14',
+    name: 'Cheesy Pizza Hub',
+    cuisine: ['Italian', 'Fast Food'],
+    rating: 4.1,
+    deliveryTime: 20,
+    image: 'https://picsum.photos/800/600?random=14',
+    isVegetarian: true,
+    priceRange: '₹₹',
+    popularDishes: ['Margherita Pizza', 'Pasta Alfredo', 'Garlic Bread']
+  },
+  {
+    id: '15',
+    name: 'BBQ Nation',
+    cuisine: ['Grill', 'Tandoori'],
+    rating: 4.8,
+    deliveryTime: 42,
+    image: 'https://picsum.photos/800/600?random=15',
+    isVegetarian: false,
+    priceRange: '₹₹₹',
+    popularDishes: ['Tandoori Paneer', 'BBQ Chicken', 'Seekh Kebab']
+  },
+  {
+    id: '16',
+    name: 'Mysore Cafe',
+    cuisine: ['South Indian', 'Vegetarian'],
+    rating: 4.4,
+    deliveryTime: 24,
+    image: 'https://picsum.photos/800/600?random=16',
+    isVegetarian: true,
+    priceRange: '₹',
+    popularDishes: ['Mysore Masala Dosa', 'Filter Coffee', 'Vada']
+  },
+    {
+      id: '17',
+      name: 'Delhi Chaat',
+      cuisine: ['Street Food', 'Indian'],
+      rating: 4.6,
+      deliveryTime: 15,
+      image: 'https://source.unsplash.com/500x300/?chaat',
+      isVegetarian: true,
+      priceRange: '₹₹',
+      popularDishes: ['Pani Puri', 'Aloo Tikki', 'Papdi Chaat', 'Dahi Bhalla']
+    },
+    {
+      id: '18',
+      name: 'Goan Delights',
+      cuisine: ['Goan', 'Seafood'],
+      rating: 4.8,
+      deliveryTime: 40,
+      image: 'https://source.unsplash.com/500x300/?goan-food',
+      isVegetarian: false,
+      priceRange: '₹₹₹',
+      popularDishes: ['Goan Fish Curry', 'Prawn Balchao', 'Bebinca', 'Xacuti']
+    },
+    {
+      id: '19',
+      name: 'Mediterranean Magic',
+      cuisine: ['Mediterranean', 'Healthy'],
+      rating: 4.7,
+      deliveryTime: 35,
+      image: 'https://source.unsplash.com/500x300/?mediterranean-food',
+      isVegetarian: true,
+      priceRange: '₹₹₹',
+      popularDishes: ['Hummus with Pita', 'Falafel', 'Shakshuka', 'Greek Salad']
+    },
+    {
+      id: '20',
+      name: 'Pizzeria Roma',
+      cuisine: ['Pizza', 'Italian'],
+      rating: 4.9,
+      deliveryTime: 30,
+      image: 'https://source.unsplash.com/500x300/?pizza',
+      isVegetarian: true,
+      priceRange: '₹₹₹',
+      popularDishes: ['Margherita Pizza', 'Pepperoni Pizza', 'Quattro Formaggi', 'Truffle Pizza']
+    }
 ];
