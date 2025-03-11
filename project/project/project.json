@@ -7,29 +7,78 @@
     "ios": {
       "executor": "@nativescript/nx:build",
       "options": {
-        "platform": "ios"
+        "platform": "ios",
+        "release": false
       },
       "configurations": {
         "build": {
-          "copyTo": "./dist/build.ipa"
+          "copyTo": "./dist/build.ipa",
+          "env": {
+            "NODE_ENV": "production"
+          }
         },
         "prod": {
-          "combineWithConfig": "build:prod"
+          "combineWithConfig": "build:prod",
+          "release": true,
+          "env": {
+            "NODE_ENV": "production"
+          }
         }
       }
     },
     "android": {
       "executor": "@nativescript/nx:build",
       "options": {
-        "platform": "android"
+        "platform": "android",
+        "release": false
       },
       "configurations": {
         "build": {
-          "copyTo": "./dist/build.apk"
+          "copyTo": "./dist/build.apk",
+          "env": {
+            "NODE_ENV": "production"
+          }
         },
         "prod": {
-          "combineWithConfig": "build:prod"
+          "combineWithConfig": "build:prod",
+          "release": true,
+          "env": {
+            "NODE_ENV": "production"
+          }
         }
+      }
+    },
+    "web": {
+      "executor": "@nx/web:build",
+      "options": {
+        "outputPath": "dist/apps/nativescript-web",
+        "baseHref": "/"
+      },
+      "configurations": {
+        "production": {
+          "optimization": true,
+          "sourceMap": false
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nativescript/nx:run",
+      "options": {
+        "platform": "android"
+      }
+    },
+    "run-ios": {
+      "executor": "@nativescript/nx:run",
+      "options": {
+        "platform": "ios",
+        "device": "emulator"
+      }
+    },
+    "run-android": {
+      "executor": "@nativescript/nx:run",
+      "options": {
+        "platform": "android",
+        "device": "emulator"
       }
     },
     "clean": {
@@ -38,8 +87,19 @@
         "clean": true
       }
     },
+    "reset": {
+      "executor": "@nativescript/nx:build",
+      "options": {
+        "clean": true,
+        "reset": true
+      }
+    },
     "lint": {
-      "executor": "@nx/eslint:lint"
+      "executor": "@nx/eslint:lint",
+      "options": {
+        "fix": true,
+        "format": "stylish"
+      }
     }
   }
 }
